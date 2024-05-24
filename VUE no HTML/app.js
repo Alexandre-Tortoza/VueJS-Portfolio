@@ -1,6 +1,20 @@
 const app = Vue.createApp({
-    // data - function - events
-    template: '<h2>EU sou um teamplate :)   </h2>'
+    data(){
+        return{
+            showMovies:'false',
+            title: "Senhor dos Aneis.",
+            author:"J.K.R.",
+            age:"81"
+        }
+    },
+    methods:{
+        changeTitle(){
+            this.title = 'O Senhor dos Anéis: A Sociedade do Anel'
+        },
+        toggleMovies(){
+            this.showMovies = !this.showMovies
+        }
+    }
 })
 
 app.mount('#app')

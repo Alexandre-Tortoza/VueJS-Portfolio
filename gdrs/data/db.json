@@ -1,0 +1,17 @@
+{
+    "server":[
+        1,
+        2,
+        3
+    ],
+    "painel":{
+        "funcionarios cadastrados": 10,
+        "funcionarios Direcioandos": 10
+    },
+    "users":[
+        {"id":1,"nome":"Alexandre"},
+        {"id":2,"nome":"Anna"},
+        {"id":3,"nome":"Eliza"}
+        
+    ]
+}

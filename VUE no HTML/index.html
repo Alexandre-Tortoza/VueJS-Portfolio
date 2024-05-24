@@ -8,7 +8,19 @@
 <body>
     <span>Olá VUE</span>
     <main id="app">
-
+        <button @click="toggleMovies()">
+            <span v-if="showMovies">Esconder</span>
+            <span v-else="!showMovies">Mostrar</span>
+        </button>
+        <div v-if="showMovies">
+            <h1>{{title}}</h1>
+            <h2>por {{author}} - {{age}} anos</h2>
+            <button v-on:click="age++">aumentar a idade</button>
+            <button v-on:click="age--">Diminuir a idade</button>
+            <div @click="title = 'O Senhor dos Anéis: As Duas Torres'">Qual o Melhor da trilogia ?</div>
+            <div @click="changeTitle()">Qual Segundo Melhor da trilogia ?</div>
+        </div>
+        <div v-show="showMovies"> v-show mantem no DOM, melhor para elementos que alteram com frequencia</div>
     </main>
     <script src="app.js"></script>
 </body>
